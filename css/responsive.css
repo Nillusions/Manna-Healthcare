@@ -5,8 +5,9 @@
    ========================================================================== */
 
 /* Phones: keep the hero buttons on one line */
-@media (max-width: 429px) {
-  .hero__actions .btn { padding-inline: 1rem; font-size: 0.9375rem; }
+@media (max-width: 599px) {
+  .hero__actions .btn { padding-inline: 1rem; white-space: nowrap; }
+  .btn__extra { display: none; } /* "Get Assistance" on phones, so it never wraps, even with larger system text */
 }
 
 /* Very small phones (320px): tighten a few things */
@@ -18,7 +19,6 @@
   .site-nav__link { font-size: 1.5rem; }
   .contact-panel__actions { grid-template-columns: 1fr; }
   .contact-panel { padding-inline: var(--space-4); }
-  .btn__extra { display: none; }
 }
 
 @media (min-width: 380px) {
@@ -34,7 +34,7 @@
   .service-detail__actions { flex-direction: row; flex-wrap: wrap; }
 
   .service-grid { grid-template-columns: repeat(2, 1fr); }
-  .testimonials { grid-template-columns: repeat(2, 1fr); }
+  .testimonials { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .testimonials .testimonial:last-child { grid-column: 1 / -1; }
   .why__list { grid-template-columns: repeat(2, 1fr); }
   .why__item { flex-direction: column; }
@@ -79,12 +79,12 @@
   .contact__info { position: sticky; top: calc(var(--header-h) + var(--space-5)); }
 
   .footer__bottom { flex-direction: row; justify-content: space-between; }
-  .testimonials { grid-template-columns: repeat(3, 1fr); }
-  .testimonials .testimonial:last-child { grid-column: auto; }
 }
 
 /* Desktop navigation */
 @media (min-width: 1024px) {
+  .testimonials { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .testimonials .testimonial:last-child { grid-column: auto; }
   .steps { grid-template-columns: repeat(3, 1fr); }
   .steps .step:last-child { grid-column: auto; }
   .step::after {

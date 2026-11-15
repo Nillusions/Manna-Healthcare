@@ -673,6 +673,7 @@ body.nav-open { overflow: hidden; }
 /* ---------- Testimonials ---------- */
 .testimonials { display: grid; gap: var(--space-5); }
 .testimonial {
+  overflow-wrap: anywhere;
   display: flex;
   flex-direction: column;
   padding: var(--space-6) var(--space-5) var(--space-5);
@@ -1186,3 +1187,14 @@ img.brand__mark { object-fit: contain; }
 .contact-list__stack { flex-direction: column; align-items: flex-start !important; justify-content: center; gap: var(--space-1) !important; padding-block: var(--space-3); }
 .contact-list__stack dd { text-align: left; font-weight: 600; }
 .contact-list address { font-style: normal; line-height: 1.5; }
+
+/* ---------- Robustness with large system text sizes ---------- */
+/* Let grid/flex columns shrink below their longest word, and wrap long words
+   (e.g. the email address) instead of pushing the page sideways. */
+body { overflow-wrap: break-word; }
+:where(.hero__grid, .about__grid, .service-grid, .why__grid, .why__list, .steps, .testimonials,
+  .coverage, .service-detail__grid, .compare, .sub-blocks, .contact__grid, .form__row,
+  .footer__grid, .contact-panel__actions) > * { min-width: 0; }
+.why__item > div,
+.contact-list dd,
+.testimonial figcaption > span { min-width: 0; }
