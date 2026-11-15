@@ -15,8 +15,16 @@
       <image:title>Manna Home Care logo</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1596450514537-fae68a81346b?auto=format&amp;fit=crop&amp;w=1280&amp;q=70</image:loc>
-      <image:title>Caregiver with an elderly man at home</image:title>
+      <image:loc>https://mannahomecare.org/assets/images/home-care-attendant-with-elderly-man-1200.webp</image:loc>
+      <image:title>Home care attendant with an elderly man at home</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mannahomecare.org/assets/images/elderly-woman-namaste-home-care-1200.webp</image:loc>
+      <image:title>Elderly woman cared for at home</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mannahomecare.org/assets/images/elderly-women-smiling-together-1200.webp</image:loc>
+      <image:title>Elderly care and companionship</image:title>
     </image:image>
   </url>
   <url>
@@ -29,23 +37,23 @@
       <image:title>Manna Home Care services</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1741707039536-113e200f9e0d?auto=format&amp;fit=crop&amp;w=960&amp;q=70</image:loc>
+      <image:loc>https://mannahomecare.org/assets/images/nurse-nursing-care-at-home-1200.webp</image:loc>
       <image:title>Nursing and patient care at home</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1680759290608-c6dda7570b1c?auto=format&amp;fit=crop&amp;w=960&amp;q=70</image:loc>
+      <image:loc>https://mannahomecare.org/assets/images/elderly-care-attendant-grooming-1200.webp</image:loc>
       <image:title>GDA staffing and daily patient assistance</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1648964388258-e71b58683ed0?auto=format&amp;fit=crop&amp;w=960&amp;q=70</image:loc>
+      <image:loc>https://mannahomecare.org/assets/images/doctor-home-visit-examination-1200.webp</image:loc>
       <image:title>Doctor home visits and physiotherapy</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1768657891765-2c5619ba1914?auto=format&amp;fit=crop&amp;w=960&amp;q=70</image:loc>
+      <image:loc>https://mannahomecare.org/assets/images/baby-care-at-home-newborn-1200.webp</image:loc>
       <image:title>Baby care at home</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&amp;fit=crop&amp;w=960&amp;q=70</image:loc>
+      <image:loc>https://mannahomecare.org/assets/images/hospital-bed-on-rent-at-home-1200.webp</image:loc>
       <image:title>Medical equipment rental and sales</image:title>
     </image:image>
   </url>

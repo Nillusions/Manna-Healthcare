@@ -30,7 +30,7 @@ manna-home-care/
 │   ├── logo/             supplied logo: original + transparent PNGs (48, 96, 192, 512)
 │   ├── icons/            favicon and apple-touch-icon
 │   ├── og/               1200x630 share images for link previews
-│   └── images/           (empty: photos are served from Unsplash's CDN, see below)
+│   └── images/           self-hosted WebP photos, 4 sizes each (see Photography)
 ├── robots.txt
 ├── sitemap.xml
 ├── site.webmanifest
@@ -108,24 +108,25 @@ Test the structured data with Google's Rich Results Test.
 
 ## Photography
 
-Photos are free-to-use images from [Unsplash](https://unsplash.com), loaded from Unsplash's
-image CDN (`images.unsplash.com`) with responsive `srcset` sizes. Unsplash recommends loading
-images from its CDN like this. Photo IDs used:
+Photos are free-to-use images from [Unsplash](https://unsplash.com), **self-hosted** in
+`assets/images/` as WebP. Each photo has four widths (`-480`, `-800`, `-1200`, `-1600`) and the
+pages pick the right one with `srcset`, so phones download small files. Every photo has descriptive
+alt text, and the file names describe the image (good for Google Images).
 
-| Where | Unsplash photo ID |
-| --- | --- |
-| Home hero / share image | `1596450514537-fae68a81346b` |
-| About (main) | `1639996262614-04fe2edd0648` |
-| About (small) | `1680759291255-f009988333cf` |
-| Nursing | `1741707039536-113e200f9e0d` |
-| GDA staffing | `1680759290608-c6dda7570b1c` |
-| Doctor & physiotherapy | `1648964388258-e71b58683ed0` |
-| Baby care | `1768657891765-2c5619ba1914` |
-| Medical equipment | `1512678080530-7760d81faba6` |
-| Final call-to-action background | `1642502073674-793aa61af8ce` |
+| File name (`assets/images/`) | Used for | Unsplash photo ID |
+| --- | --- | --- |
+| `home-care-attendant-with-elderly-man` | Home hero, share previews | `1596450514537-fae68a81346b` |
+| `elderly-woman-namaste-home-care` | About (main) | `1639996262614-04fe2edd0648` |
+| `elderly-women-smiling-together` | About (small) | `1680759291255-f009988333cf` |
+| `nurse-nursing-care-at-home` | Nursing | `1741707039536-113e200f9e0d` |
+| `elderly-care-attendant-grooming` | GDA staffing | `1680759290608-c6dda7570b1c` |
+| `doctor-home-visit-examination` | Doctor & physiotherapy | `1648964388258-e71b58683ed0` |
+| `baby-care-at-home-newborn` | Baby care | `1768657891765-2c5619ba1914` |
+| `hospital-bed-on-rent-at-home` | Medical equipment | `1512678080530-7760d81faba6` |
+| `elderly-woman-reading-at-home` | Final call-to-action background | `1642502073674-793aa61af8ce` |
 
-To self-host instead, download the images into `assets/images/` and update the `src`/`srcset`
-attributes.
+To replace a photo, add four WebP files with the same naming pattern and update the matching
+`src`/`srcset` in the HTML (and the image entry in `sitemap.xml`).
 
 ## Accessibility and performance notes
 
@@ -134,7 +135,7 @@ attributes.
 - Touch targets are at least 44px. No horizontal scrolling from 320px to 1440px.
 - Animations only change opacity and position, never hide content from keyboard users, and are
   switched off entirely for `prefers-reduced-motion`. If GSAP fails to load, all content stays visible.
-- Images are lazy-loaded (except the hero) and served at the right size for each screen.
+- Photos are self-hosted WebP, lazy-loaded (except the hero) and served at the right size for each screen.
 
 ## Tested
 
