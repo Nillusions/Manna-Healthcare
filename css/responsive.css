@@ -1,0 +1,175 @@
+/* ==========================================================================
+   Manna Home Care: responsive enhancements (min-width, mobile first)
+   Breakpoints: 380 (large phones) · 600 (phablet) · 768 (tablet)
+                1024 (small desktop) · 1280 (desktop)
+   ========================================================================== */
+
+/* Very small phones (320px): tighten a few things */
+@media (max-width: 359px) {
+  :root { --gutter: 1rem; }
+  .brand__name { font-size: 1.2rem; }
+  .brand__mark { width: 40px; height: 40px; }
+  .btn { padding-inline: 1.1rem; }
+  .site-nav__link { font-size: 1.5rem; }
+  .contact-panel__actions { grid-template-columns: 1fr; }
+  .contact-panel { padding-inline: var(--space-4); }
+}
+
+@media (min-width: 380px) {
+  .wa-float__label { display: inline; }
+  .wa-float { padding: 0 1.15rem 0 0.9rem; }
+}
+
+@media (min-width: 600px) {
+  :root { --gutter: 2rem; }
+
+  .hero__actions,
+  .final-cta__actions,
+  .service-detail__actions { flex-direction: row; flex-wrap: wrap; }
+
+  .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials { grid-template-columns: repeat(2, 1fr); }
+  .testimonials .testimonial:last-child { grid-column: 1 / -1; }
+  .why__list { grid-template-columns: repeat(2, 1fr); }
+  .why__item { flex-direction: column; }
+  .why__item:last-child { grid-column: 1 / -1; flex-direction: row; }
+  .compare { grid-template-columns: repeat(2, 1fr); }
+  .sub-blocks { grid-template-columns: repeat(2, 1fr); }
+  .footer__grid { grid-template-columns: repeat(2, 1fr); }
+  .footer__brand { grid-column: 1 / -1; }
+  .final-cta__inner { padding: var(--space-8) var(--space-7); }
+  .coverage { padding: var(--space-7); }
+  .form-card { padding: var(--space-7); }
+  .form__row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
+}
+
+@media (min-width: 768px) {
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .steps .step:last-child { grid-column: 1 / -1; }
+
+  /* tablet & up: text sits over the photo */
+  .hero__card { flex-direction: row; align-items: center; min-height: 600px; }
+  .hero__card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(10, 47, 60, 0.92) 0%, rgba(10, 47, 60, 0.7) 40%, rgba(10, 47, 60, 0) 72%);
+  }
+  .hero__media { position: absolute; inset: 0; z-index: -2; aspect-ratio: auto; }
+  .hero__media::after { display: none; }
+  .hero__content { padding: var(--space-8) var(--space-7); max-width: 40rem; }
+  .hero__media img { object-position: 70% 30%; }
+
+  .about__grid { grid-template-columns: 1fr 1fr; }
+  .about__media { padding-right: var(--space-5); padding-bottom: var(--space-6); }
+
+  .coverage { grid-template-columns: 1.2fr 1fr; align-items: center; }
+
+  .service-detail__grid { grid-template-columns: 1fr 1fr; gap: var(--space-7); }
+  .service-detail:nth-of-type(even) .service-detail__media { order: 2; }
+
+  .contact__grid { grid-template-columns: 1fr 1.25fr; align-items: start; }
+  .contact__info { position: sticky; top: calc(var(--header-h) + var(--space-5)); }
+
+  .footer__bottom { flex-direction: row; justify-content: space-between; }
+  .testimonials { grid-template-columns: repeat(3, 1fr); }
+  .testimonials .testimonial:last-child { grid-column: auto; }
+}
+
+/* Desktop navigation */
+@media (min-width: 1024px) {
+  .steps { grid-template-columns: repeat(3, 1fr); }
+  .steps .step:last-child { grid-column: auto; }
+  .step::after {
+    /* connector line between steps */
+    content: "";
+    position: absolute;
+    top: calc(var(--space-6) + 28px);
+    left: calc(var(--space-5) + 64px);
+    right: calc(-1 * var(--space-5));
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--line-green) 0 6px, transparent 6px 12px);
+  }
+  .step:last-child::after { display: none; }
+  :root { --header-h: 80px; }
+
+  .header-actions { display: none; }
+  .site-nav {
+    position: static;
+    inset: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-6);
+    padding: 0;
+    background: none;
+    overflow: visible;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .site-nav__list { flex-direction: row; gap: var(--space-2); }
+  .site-nav__link {
+    position: relative;
+    min-height: 44px;
+    padding: 0 var(--space-4);
+    border: 0;
+    font-size: var(--fs-base);
+    font-weight: 700;
+    letter-spacing: 0;
+    color: var(--charcoal);
+  }
+  .site-nav__link::after,
+  .site-nav__link[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    left: var(--space-4);
+    right: var(--space-4);
+    bottom: 6px;
+    width: auto;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--leaf);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s var(--ease);
+  }
+  .site-nav__link:hover::after,
+  .site-nav__link[aria-current="page"]::after { transform: scaleX(1); }
+  .site-nav__link:hover,
+  .site-nav__link[aria-current="page"] { color: var(--brand-ink); }
+  .site-nav__cta { margin-top: 0; }
+  .site-nav__meta { display: none; }
+
+  .brand__mark { width: 54px; height: 54px; }
+  .brand__name { font-size: 1.5rem; }
+
+  .service-grid { grid-template-columns: repeat(12, 1fr); }
+  .service-grid > * { grid-column: span 3; }
+  .service-grid > :nth-child(1),
+  .service-grid > :nth-child(2) { grid-column: span 6; }
+  .service-grid > :nth-child(1) .service-card__media,
+  .service-grid > :nth-child(2) .service-card__media { aspect-ratio: 16 / 9; }
+
+  .why__grid { grid-template-columns: 0.9fr 1.3fr; gap: var(--space-8); align-items: start; }
+  .why__intro { position: sticky; top: calc(var(--header-h) + var(--space-6)); }
+
+  .footer__grid { grid-template-columns: 1.6fr 1fr 1fr 1.2fr; }
+  .footer__brand { grid-column: auto; }
+
+  .hero__card { min-height: 640px; }
+
+  .wa-float { right: 24px; bottom: 24px; }
+}
+
+@media (min-width: 1280px) {
+  :root { --gutter: 2.5rem; }
+  .about__grid { gap: var(--space-8); }
+  .service-detail__grid { gap: var(--space-8); }
+  .contact__grid { gap: var(--space-8); }
+}
+
+@media (min-width: 1440px) {
+  :root { --container: 1280px; }
+}
