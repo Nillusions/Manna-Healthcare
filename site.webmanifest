@@ -1,0 +1,14 @@
+{
+  "name": "Manna Home Care",
+  "short_name": "Manna Care",
+  "description": "Home healthcare services in Delhi NCR.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#FAFCFA",
+  "theme_color": "#0E5F78",
+  "icons": [
+    { "src": "assets/logo/manna-logo-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/logo/manna-logo-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

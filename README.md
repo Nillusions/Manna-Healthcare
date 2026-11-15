@@ -29,7 +29,11 @@ manna-home-care/
 ├── assets/
 │   ├── logo/             supplied logo: original + transparent PNGs (48, 96, 192, 512)
 │   ├── icons/            favicon and apple-touch-icon
+│   ├── og/               1200x630 share images for link previews
 │   └── images/           (empty: photos are served from Unsplash's CDN, see below)
+├── robots.txt
+├── sitemap.xml
+├── site.webmanifest
 └── README.md
 ```
 
@@ -76,7 +80,19 @@ set the output directory to `/` (the repository root).
 2. **Service coverage.** The home page lists Delhi, Gurugram, Noida, Ghaziabad and Faridabad as the
    Delhi NCR region. Confirm these match the areas you actually serve.
 3. **Operating hours** are not shown. Add a row to the contact list in `contact.html` if needed.
-4. Add your real domain to the `og:` tags if you want link previews to point at it.
+
+## SEO and link previews
+
+- Each page has a unique title (under 60 characters), meta description (under 160), canonical URL,
+  Open Graph and Twitter tags, and schema.org JSON-LD (`MedicalBusiness` with address, phone,
+  email, service area and services, plus `WebSite`, `WebPage` and `BreadcrumbList`).
+- Share images (1200x630) are in `assets/og/`: `og-home.png`, `og-services.png` and `og-contact.png`.
+  They are what WhatsApp, Facebook and LinkedIn show when a page link is shared.
+- `sitemap.xml`, `robots.txt` and `site.webmanifest` are in the root.
+- All absolute URLs use **https://nillusions.github.io/Manna-Healthcare/**. If the site moves to a
+  custom domain, find and replace that address in the three HTML files, `sitemap.xml` and `robots.txt`.
+- On a GitHub Pages project site, `robots.txt` is not at the domain root, so search engines ignore it.
+  Submit `sitemap.xml` in Google Search Console instead. With a custom domain, `robots.txt` works as normal.
 
 ## Photography
 
