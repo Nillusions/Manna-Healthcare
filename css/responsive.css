@@ -35,7 +35,6 @@
 
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .testimonials .testimonial:last-child { grid-column: 1 / -1; }
   .why__list { grid-template-columns: repeat(2, 1fr); }
   .why__item { flex-direction: column; }
   .why__item:last-child { grid-column: 1 / -1; flex-direction: row; }
@@ -84,7 +83,6 @@
 /* Desktop navigation */
 @media (min-width: 1024px) {
   .testimonials { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .testimonials .testimonial:last-child { grid-column: auto; }
   .steps { grid-template-columns: repeat(3, 1fr); }
   .steps .step:last-child { grid-column: auto; }
   .step::after {

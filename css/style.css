@@ -698,15 +698,6 @@ body.nav-open { overflow: hidden; }
   gap: var(--space-3);
 }
 .testimonial__stars { color: #e7a521; font-size: 1.05rem; letter-spacing: 2px; }
-.testimonial__tag {
-  /* small, honest marker until real reviews are supplied */
-  padding: 2px 8px;
-  border-radius: var(--radius-pill);
-  background: var(--ivory);
-  color: var(--muted);
-  font-size: 0.6875rem;
-  font-weight: 600;
-}
 .testimonial blockquote {
   margin-top: var(--space-4);
   flex: 1;

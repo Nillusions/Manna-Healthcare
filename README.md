@@ -74,13 +74,11 @@ set the output directory to `/` (the repository root).
 
 ## Before going live
 
-1. **Testimonials are samples.** The three reviews on the home page are illustrative and carry a
-   small "Sample review" label. Replace them with genuine, approved reviews (search `index.html` for
-   "SAMPLE reviews") and remove the label. Publishing invented reviews
-   as real ones can breach consumer-protection rules on fake reviews.
-2. **Service coverage.** The home page lists Delhi, Gurugram, Noida, Ghaziabad and Faridabad as the
-   Delhi NCR region. Confirm these match the areas you actually serve.
-3. **Operating hours** are not shown. Add a row to the contact list in `contact.html` if needed.
+1. **Testimonials.** The six reviews are in the "What families say" section of `index.html`.
+   Keep them up to date with genuine reviews from families (with their permission), and collect
+   reviews on your Google Business Profile too. Reviews are deliberately not added to the
+   structured data: Google does not show star ratings for reviews a business publishes about itself.
+2. **Operating hours** are not shown. Add a row to the contact list in `contact.html` if needed.
 
 ## SEO and link previews
 
