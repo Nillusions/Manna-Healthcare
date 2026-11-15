@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nillusions.github.io/Manna-Healthcare/sitemap.xml
+Sitemap: https://mannahomecare.org/sitemap.xml

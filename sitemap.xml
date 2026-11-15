@@ -1,21 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://nillusions.github.io/Manna-Healthcare/</loc>
+    <loc>https://mannahomecare.org/</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mannahomecare.org/assets/og/og-home.png</image:loc>
+      <image:title>Manna Home Care: Care that feels like home</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mannahomecare.org/assets/logo/manna-logo-512.png</image:loc>
+      <image:title>Manna Home Care logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1596450514537-fae68a81346b?auto=format&amp;fit=crop&amp;w=1280&amp;q=70</image:loc>
+      <image:title>Caregiver with an elderly man at home</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://nillusions.github.io/Manna-Healthcare/services.html</loc>
+    <loc>https://mannahomecare.org/services.html</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://mannahomecare.org/assets/og/og-services.png</image:loc>
+      <image:title>Manna Home Care services</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1741707039536-113e200f9e0d?auto=format&amp;fit=crop&amp;w=960&amp;q=70</image:loc>
+      <image:title>Nursing and patient care at home</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1680759290608-c6dda7570b1c?auto=format&amp;fit=crop&amp;w=960&amp;q=70</image:loc>
+      <image:title>GDA staffing and daily patient assistance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1648964388258-e71b58683ed0?auto=format&amp;fit=crop&amp;w=960&amp;q=70</image:loc>
+      <image:title>Doctor home visits and physiotherapy</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1768657891765-2c5619ba1914?auto=format&amp;fit=crop&amp;w=960&amp;q=70</image:loc>
+      <image:title>Baby care at home</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&amp;fit=crop&amp;w=960&amp;q=70</image:loc>
+      <image:title>Medical equipment rental and sales</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://nillusions.github.io/Manna-Healthcare/contact.html</loc>
+    <loc>https://mannahomecare.org/contact.html</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mannahomecare.org/assets/og/og-contact.png</image:loc>
+      <image:title>Contact Manna Home Care</image:title>
+    </image:image>
   </url>
 </urlset>
