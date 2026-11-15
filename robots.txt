@@ -1,4 +1,13 @@
+# robots.txt for https://mannahomecare.org/
+# Manna Home Care: home nursing, 24-hour care, home ICU setup and elderly care
+# in Noida, Greater Noida and Delhi NCR.
+
+# All search engines may crawl every public page, plus the CSS, JS and images
+# Google needs to render the site properly.
 User-agent: *
 Allow: /
+
+# Project notes, not a public page.
+Disallow: /README.md
 
 Sitemap: https://mannahomecare.org/sitemap.xml

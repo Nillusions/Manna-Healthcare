@@ -83,19 +83,28 @@ set the output directory to `/` (the repository root).
 
 ## SEO and link previews
 
-- Each page has a unique title (under 60 characters), meta description (under 160), canonical URL,
-  Open Graph and Twitter tags, and schema.org JSON-LD (`MedicalBusiness` with address, phone,
-  email, service area and services, plus `WebSite`, `WebPage`, `BreadcrumbList` and an `ItemList`
-  of all site pages).
-- Share images (1200x630) are in `assets/og/`: `og-home.png`, `og-services.png` and `og-contact.png`.
-  They are what WhatsApp, Facebook and LinkedIn show when a page link is shared.
-- `sitemap.xml`, `robots.txt` and `site.webmanifest` are in the root.
-- The site is served at **https://mannahomecare.org/** (set by the `CNAME` file). All canonical URLs,
-  share images, schema and the sitemap use this address. If the domain ever changes, find and replace
-  it in the three HTML files, `sitemap.xml` and `robots.txt`.
-- `sitemap.xml` lists all three pages with their images (Google image-sitemap format), and every page
-  links to it with `<link rel="sitemap">`. `robots.txt` points crawlers to it. Submit
-  `https://mannahomecare.org/sitemap.xml` in Google Search Console after launch.
+- **Titles and descriptions:** each page has a unique title (under 60 characters) and meta
+  description (under 160) built around the main searches: home nursing, 24-hour care, home ICU
+  setup, elderly care attendants, physiotherapy at home and equipment on rent, in Noida,
+  Greater Noida and Delhi NCR.
+- **Canonical URLs, Open Graph and Twitter tags** on every page, using **https://mannahomecare.org/**
+  (set by the `CNAME` file).
+- **Share images** (1200x630) in `assets/og/`: `og-home.png`, `og-services.png`, `og-contact.png`.
+- **Structured data (JSON-LD)** on every page:
+  - `MedicalBusiness`: address, both phone numbers, email, areas served (Noida, Greater Noida, Delhi,
+    Gurugram, Ghaziabad, Faridabad) and an offer catalogue of all eight services.
+  - `WebPage` (Home, Services) or `ContactPage` (Contact), with a `dateModified` date.
+  - Services page: an `ItemList` describing each service individually.
+  - Home page: `WebSite` and an `FAQPage` that mirrors the 11 visible FAQ questions.
+  - `BreadcrumbList` on Services and Contact, and an `ItemList` of all site pages.
+- **`sitemap.xml`** lists all three pages with their images; every page links to it.
+- **`robots.txt`** allows all crawlers, keeps `README.md` out of search, and points to the sitemap.
+- If the domain changes, find and replace `https://mannahomecare.org/` in the three HTML files,
+  `sitemap.xml` and `robots.txt`. When content changes, update the `<lastmod>` dates in the sitemap.
+
+**After launch:** add the site to Google Search Console (verify with a DNS record at your domain
+provider), submit `https://mannahomecare.org/sitemap.xml`, and use "Request indexing" on each page.
+Test the structured data with Google's Rich Results Test.
 
 ## Photography
 
