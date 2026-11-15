@@ -477,16 +477,26 @@ body.nav-open { overflow: hidden; }
   margin-top: var(--space-6);
 }
 .hero__services {
+  /* one row: swipeable on small screens, fits fully on desktop (responsive.css) */
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: var(--space-2);
-  margin: var(--space-5) 0 0;
-  padding: 0;
+  margin: var(--space-5) calc(-1 * var(--gutter)) 0;
+  padding: 2px var(--gutter);
   list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
 }
+.hero__services::-webkit-scrollbar { display: none; }
+.hero__services li { flex: 0 0 auto; scroll-snap-align: start; }
 .hero__services a {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  white-space: nowrap;
   min-height: 40px;
   padding: 0.4rem 0.95rem;
   border-radius: var(--radius-pill);
