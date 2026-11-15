@@ -1257,3 +1257,32 @@ body { overflow-wrap: break-word; }
 .why__item > div,
 .contact-list dd,
 .testimonial figcaption > span { min-width: 0; }
+
+/* ---------- Google review band (above the footer on every page) ---------- */
+.review-band { padding-bottom: var(--space-7); }
+.review-band__card {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: start;
+  padding: var(--space-6) var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--ivory);
+  border: 1px solid var(--line);
+}
+.review-band__stars { display: flex; gap: 2px; color: #e7a521; }
+.review-band__stars .icon { width: 22px; height: 22px; }
+.review-band h2 { font-size: var(--fs-lg); letter-spacing: -0.02em; }
+.review-band p { margin-top: var(--space-2); color: var(--muted); }
+.review-band__btn { white-space: nowrap; }
+.review-band__btn .icon { width: 1rem; height: 1rem; }
+
+.testimonials__more { margin-top: var(--space-6); color: var(--muted); }
+.testimonials__more a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand);
+}
+.testimonials__more .icon { width: 1rem; height: 1rem; }

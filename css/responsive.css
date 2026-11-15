@@ -12,6 +12,7 @@
 
 /* Very small phones (320px): tighten a few things */
 @media (max-width: 359px) {
+  .review-band__btn { white-space: normal; }
   :root { --gutter: 1rem; }
   .brand__name { font-size: 1.2rem; }
   .brand__mark { width: 40px; height: 40px; }
@@ -49,6 +50,7 @@
 }
 
 @media (min-width: 768px) {
+  .review-band__card { grid-template-columns: auto 1fr auto; align-items: center; gap: var(--space-6); padding: var(--space-6) var(--space-7); }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .steps .step:last-child { grid-column: 1 / -1; }
 
