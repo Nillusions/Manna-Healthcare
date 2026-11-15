@@ -4,6 +4,11 @@
                 1024 (small desktop) · 1280 (desktop)
    ========================================================================== */
 
+/* Phones: keep the hero buttons on one line */
+@media (max-width: 429px) {
+  .hero__actions .btn { padding-inline: 1rem; font-size: 0.9375rem; }
+}
+
 /* Very small phones (320px): tighten a few things */
 @media (max-width: 359px) {
   :root { --gutter: 1rem; }
@@ -13,6 +18,7 @@
   .site-nav__link { font-size: 1.5rem; }
   .contact-panel__actions { grid-template-columns: 1fr; }
   .contact-panel { padding-inline: var(--space-4); }
+  .btn__extra { display: none; }
 }
 
 @media (min-width: 380px) {

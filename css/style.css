@@ -208,8 +208,10 @@ p { text-wrap: pretty; }
 .btn:hover .btn__arrow { transform: translateX(4px); }
 
 .btn--primary:hover { --btn-bg: var(--brand-deep); }
-.btn--wa { --btn-bg: var(--wa-green-dark); }
-.btn--wa:hover { --btn-bg: #0e7a40; }
+/* WhatsApp buttons: bright WhatsApp green with dark text (about 8:1 contrast),
+   reads clearly on both light sections and the dark hero */
+.btn--wa { --btn-bg: var(--wa-green); --btn-fg: #06301a; }
+.btn--wa:hover { --btn-bg: #1ebe5a; }
 .btn--ghost {
   --btn-bg: transparent;
   --btn-fg: var(--brand-deep);
