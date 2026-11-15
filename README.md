@@ -16,6 +16,7 @@ no framework, no backend. WhatsApp is the main enquiry channel.
 
 ```
 manna-home-care/
+├── favicon.ico         16/32/48 px browser icon (logo on a white disc)
 ├── index.html
 ├── services.html
 ├── contact.html
@@ -28,7 +29,7 @@ manna-home-care/
 │   └── animations.js     GSAP + ScrollTrigger animations (respects reduced motion)
 ├── assets/
 │   ├── logo/             supplied logo: original + transparent PNGs (48, 96, 192, 512)
-│   ├── icons/            favicon and apple-touch-icon
+│   ├── icons/            favicons (16, 32, 48, 192, 512), apple-touch-icon, maskable icon
 │   ├── og/               1200x630 share images for link previews
 │   └── images/           self-hosted WebP photos, 4 sizes each (see Photography)
 ├── robots.txt
